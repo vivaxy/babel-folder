@@ -1,6 +1,6 @@
 {
   "name": "@vivaxy/babel-folder",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "babel from source to build",
   "main": "./build/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/vivaxy/babel-folder.git"
   },
-  "author": "",
+  "author": "vivaxy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vivaxy/babel-folder/issues"
