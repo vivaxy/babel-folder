@@ -1,11 +1,11 @@
 {
-  "name": "babel-folder",
+  "name": "@vivaxy/babel-folder",
   "version": "0.0.0",
   "description": "babel from source to build",
   "main": "./build/index.js",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "release": "npm run build && standard-version && git push --follow-tags && npm publish"
+    "release": "npm run build && standard-version && git push --follow-tags && npm publish --access=public"
   },
   "repository": {
     "type": "git",
