@@ -1,6 +1,6 @@
 {
   "name": "@vivaxy/babel-folder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "babel from source to build",
   "main": "./build/index.js",
   "scripts": {
