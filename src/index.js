@@ -6,11 +6,11 @@
 import path from 'path';
 
 import glob from 'glob-promise';
-import fsp from 'fs-promise';
+import fse from 'fs-extra';
 import { transformFile } from 'babel-core';
 
 export default (SOURCE_PATH, BUILD_PATH) => {
-    const sourceFiles = path.join(SOURCE_PATH, `**`, `*.js`);
+    const sourceFiles = path.join(SOURCE_PATH, '**', '*.js');
     glob(sourceFiles)
         .then((files) => {
             const transformJobs = files.map((file) => {
@@ -33,7 +33,7 @@ export default (SOURCE_PATH, BUILD_PATH) => {
         .then((results) => {
             const writeJobs = results.map(({ relativeFilename, code }) => {
                 const outputFilename = path.join(BUILD_PATH, relativeFilename);
-                return fsp.outputFile(outputFilename, code);
+                return fse.outputFile(outputFilename, code);
             });
             return Promise.all(writeJobs);
         });

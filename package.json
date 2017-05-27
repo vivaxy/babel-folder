@@ -5,7 +5,9 @@
   "main": "./build/index.js",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "release": "npm run build && standard-version && git push --follow-tags && npm publish --access=public"
+    "lint": "eslint ./src",
+    "bump": "standard-version && git push --follow-tags",
+    "release": "npm run lint && npm run build && npm run bump && npm publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "homepage": "https://github.com/vivaxy/babel-folder#readme",
   "dependencies": {
     "babel-core": "^6.24.1",
-    "fs-promise": "^2.0.2",
+    "fs-extra": "^3.0.1",
     "glob": "^7.1.1",
     "glob-promise": "^3.1.0"
   },
